@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <script>
+        var correctPassword = "9dec";
+        var enteredPassword
+        while (enteredPassword !== correctPassword) {
+            enteredPassword = prompt("Please enter the password: (Hint: The day you Joon Pyik into my life 🫶🏻)")
+            if (enteredPassword === null) {
+                alert("Why Eaint Hmueee cancelling Thuta? Please don't😭. Eaint Hmue pyit pal dh ma khan srr ng fuu ;((((");
+                window.location.reload();
+                break;
+            }
+
+            if (enteredPassword !== correctPassword) {
+                alert("Nope 🙄");
+            }
+        }
+
+    </script>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Eaint Hmue Me ko Myittar Shi lhhh? huh? huhh? 🥺</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
